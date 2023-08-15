@@ -48,8 +48,8 @@ crow::response subtract(const crow::request &req)
         return crow::response(400, "Invalid JSON");
     }
 
-    int a = input["a"].i();
-    int b = input["b"].i();
+    int a = input["first"].i();
+    int b = input["second"].i();
     int result = a - b;
 
     crow::json::wvalue response_json;
